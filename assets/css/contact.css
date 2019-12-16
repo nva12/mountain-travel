@@ -1,7 +1,10 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 /* General styles */
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -50,7 +53,12 @@ h1 {
 }
 
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   max-width: 400px;
   margin: 0 auto;
@@ -71,17 +79,27 @@ p {
   font-size: 0.875rem;
 }
 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
 }
 .nav-link {
   color: inherit;
   text-decoration: none;
+  -webkit-transition: all 0.3s linear 0.05;
+  -o-transition: all 0.3s linear 0.05;
   transition: all 0.3s linear 0.05;
 }
 .nav-link i {
   font-size: 0.75rem;
+  -webkit-transform: translateY(-1.5px);
+  -ms-transform: translateY(-1.5px);
   transform: translateY(-1.5px);
 }
 .nav-link:hover {
@@ -94,12 +112,16 @@ button {
   text-transform: uppercase;
   text-align: center;
   background-color: #3f51b5;
+  -webkit-transition: all 0.3s linear 0.05s;
+  -o-transition: all 0.3s linear 0.05s;
   transition: all 0.3s linear 0.05s;
   color: #fff;
   border: none;
 }
 button:hover {
   background-color: #2539a7;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
   cursor: pointer;
 }

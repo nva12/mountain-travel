@@ -1,7 +1,10 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 /* General styles */
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -33,17 +36,28 @@ a.btn {
   text-align: center;
   background-color: #3f51b5;
   opacity: 1;
+  -webkit-transition: all 0.3s 0.05s;
+  -o-transition: all 0.3s 0.05s;
   transition: all 0.3s 0.05s;
 }
 
 a.btn:hover {
   background-color: #2539a7;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 100px 80px;
 }
@@ -54,8 +68,13 @@ section:not(.hero):nth-child(even) {
 
 .grid {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -111,13 +130,26 @@ header {
   left: 0;
   width: 100%;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 35px 100px 0;
+  -webkit-animation: 1s fadein 0.5s forwards;
   animation: 1s fadein 0.5s forwards;
   opacity: 0;
   color: #fff;
+}
+
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
@@ -131,6 +163,8 @@ header h2 {
 }
 
 header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: -15px;
 }
@@ -143,6 +177,9 @@ header nav li {
 @media screen and (max-width: 800px) {
   header {
     padding: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   header h2 {
@@ -156,6 +193,8 @@ header nav li {
 /* Hero section */
 .hero {
   position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   min-height: 100vh;
@@ -194,7 +233,15 @@ header nav li {
 .hero-content-area {
   opacity: 0;
   margin-top: 100px;
+  -webkit-animation: 1s slidefade 0.5s forwards;
   animation: 1s slidefade 0.5s forwards;
+}
+
+@-webkit-keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
 }
 
 @keyframes slidefade {
@@ -226,22 +273,26 @@ header nav li {
 }
 
 .destinations .grid li.small {
+  -ms-flex-preferred-size: 30%;
   flex-basis: 30%;
 }
 
 .destinations .grid li.large {
+  -ms-flex-preferred-size: 70%;
   flex-basis: 70%;
 }
 
 @media screen and (max-width: 1100px) {
   .destinations .grid li.small,
   .destinations .grid li.large {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
 }
 @media screen and (max-width: 800px) {
   .destinations .grid li.small,
   .destinations .grid li.large {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
 }
@@ -249,6 +300,7 @@ header nav li {
 /* Packages section */
 .packages .grid li {
   padding: 50px;
+  -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   text-align: center;
 }
@@ -264,6 +316,7 @@ header nav li {
 
 @media screen and (max-width: 800px) {
   .packages .grid li {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     padding: 20px;
   }
@@ -271,10 +324,17 @@ header nav li {
 
 /* Testimonials section */
 .testimonial-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .testimonial-card:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
 .testimonial-image img {
@@ -291,6 +351,9 @@ header nav li {
 @media screen and (max-width: 500px) {
   .testimonial-card,
   .testimonial-card:nth-of-type(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
   }
@@ -306,9 +369,16 @@ header nav li {
 
 /* Contact section */
 .contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 60%;
 }
@@ -322,11 +392,14 @@ header nav li {
   margin-right: 30px;
   font-size: 1.125rem;
   color: #555;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
 @media (max-width: 1040px) {
   .contact form input {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     margin: 0 0 20px 0;
   }
@@ -334,7 +407,10 @@ header nav li {
 
 /* Footer */
 .footer-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   background-color: #607d8b;
   color: #fff;
@@ -347,6 +423,8 @@ header nav li {
 }
 
 .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 18px 0;
 }
@@ -356,8 +434,14 @@ header nav li {
 }
 
 .contact-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: row;
+  -ms-flex: row nowrap;
   flex: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 12px;
 }
@@ -365,12 +449,16 @@ header nav li {
 .contact-line-icon {
   min-width: 32px;
   margin-right: 18px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   text-align: center;
   opacity: 0.6;
 }
 
 .contact-line-details {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   text-align: left;
 }
@@ -391,13 +479,23 @@ header nav li {
 
 @media (max-width: 764px) {
   .footer-company {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
 .footer-dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   min-height: 50px;
   padding: 20px 60px 30px;
@@ -407,8 +505,15 @@ header nav li {
 }
 
 .credits {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   opacity: 0.75;
   text-align: center;
