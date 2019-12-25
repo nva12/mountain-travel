@@ -1,0 +1,10 @@
+.feature {
+  &__icon {
+    color: $mainIndigo;
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    margin: 25px 0;
+  }
+}

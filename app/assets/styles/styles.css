@@ -7,6 +7,8 @@
 @import "modules/_btn";
 @import "modules/_hero";
 @import "modules/_grid";
+@import "modules/_feature";
+@import "modules/_testimonial";
 @import "modules/_social-icons";
 @import "modules/_contact-page";
 
@@ -32,65 +34,6 @@ hr {
   opacity: 0;
   margin-right: -100px;
   max-width: 100%;
-}
-
-/* Packages section */
-.packages .grid li {
-  padding: 50px;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  text-align: center;
-}
-
-.packages .grid li i {
-  color: #3f51b5;
-}
-
-.packages .grid li h4 {
-  font-size: 1.875rem;
-  margin: 25px 0;
-}
-
-@media screen and (max-width: 800px) {
-  .packages .grid li {
-    flex-basis: 100%;
-    padding: 20px;
-  }
-}
-
-/* Testimonials section */
-.testimonial-card {
-  display: flex;
-  align-items: center;
-}
-.testimonial-card:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-.testimonial-image img {
-  border-radius: 50%;
-  width: 140px;
-  height: auto;
-}
-.testimonials .quote {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 40px 0 25px;
-}
-
-@media screen and (max-width: 500px) {
-  .testimonial-card,
-  .testimonial-card:nth-of-type(even) {
-    flex-direction: column;
-    text-align: center;
-  }
-  .testimonials .quote {
-    /* font-size: 1.125rem; */
-    margin: 15px 0;
-  }
-
-  .testimonials .author {
-    font-size: 0.875rem;
-  }
 }
 
 /* Contact section */
