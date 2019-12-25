@@ -3,69 +3,12 @@
 @import "base/_global";
 @import "base/_mixins";
 @import "modules/_site-header";
+@import "modules/_section";
+@import "modules/_btn";
 @import "modules/_hero";
-@import "modules/_contact";
-
-a.btn {
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  background-color: #3f51b5;
-  opacity: 1;
-  -webkit-transition: all 0.3s 0.05s;
-  -o-transition: all 0.3s 0.05s;
-  transition: all 0.3s 0.05s;
-}
-
-a.btn:hover {
-  background-color: #2539a7;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.hero a.btn {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 20px 46px;
-}
-
-@media screen and (max-width: 800px) {
-  .hero a.btn {
-    padding: 15px 40px;
-  }
-}
-
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 100px 80px;
-}
-
-section:not(.hero):nth-child(even) {
-  background-color: #f5f5f5;
-}
-
-.grid {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
+@import "modules/_grid";
+@import "modules/_social-icons";
+@import "modules/_contact-page";
 
 hr {
   width: 250px;
@@ -73,21 +16,6 @@ hr {
   background-color: #3f51b5;
   border: 0;
   margin-bottom: 50px;
-}
-
-section h3.title {
-  text-transform: capitalize;
-  font: bold 32px "Open Sans", sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-section p {
-  max-width: 775px;
-  line-height: 2;
-  padding: 0 20px;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .fadein {
@@ -104,50 +32,6 @@ section p {
   opacity: 0;
   margin-right: -100px;
   max-width: 100%;
-}
-
-@media screen and (max-width: 800px) {
-  section {
-    padding: 50px 20px;
-  }
-}
-
-/* Header */
-
-/* Hero section */
-
-/* Destinations section */
-.destinations .grid li {
-  height: 350px;
-  padding: 20px;
-  background-clip: content-box;
-  background-size: cover;
-  background-position: center;
-}
-
-.destinations .grid li.small {
-  -ms-flex-preferred-size: 30%;
-  flex-basis: 30%;
-}
-
-.destinations .grid li.large {
-  -ms-flex-preferred-size: 70%;
-  flex-basis: 70%;
-}
-
-@media screen and (max-width: 1100px) {
-  .destinations .grid li.small,
-  .destinations .grid li.large {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-  }
-}
-@media screen and (max-width: 800px) {
-  .destinations .grid li.small,
-  .destinations .grid li.large {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
 }
 
 /* Packages section */
@@ -169,7 +53,6 @@ section p {
 
 @media screen and (max-width: 800px) {
   .packages .grid li {
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     padding: 20px;
   }
@@ -177,17 +60,10 @@ section p {
 
 /* Testimonials section */
 .testimonial-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .testimonial-card:nth-of-type(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
 .testimonial-image img {
@@ -204,9 +80,6 @@ section p {
 @media screen and (max-width: 500px) {
   .testimonial-card,
   .testimonial-card:nth-of-type(even) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
   }
@@ -222,22 +95,11 @@ section p {
 
 /* Contact section */
 .contact form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 60%;
-}
-
-.contact form .btn {
-  padding: 18px 42px;
 }
 
 .contact form input {
@@ -245,14 +107,11 @@ section p {
   margin-right: 30px;
   font-size: 1.125rem;
   color: #555;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 
 @media (max-width: 1040px) {
   .contact form input {
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     margin: 0 0 20px 0;
   }
@@ -260,10 +119,7 @@ section p {
 
 /* Footer */
 .footer-company {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   background-color: #607d8b;
   color: #fff;
@@ -275,26 +131,9 @@ section p {
   margin: 1.5rem 0;
 }
 
-.social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 18px 0;
-}
-
-.social-icons li:not(:first-of-type) {
-  margin-left: 20px;
-}
-
 .contact-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: row;
-  -ms-flex: row nowrap;
   flex: row nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 12px;
 }
@@ -302,16 +141,12 @@ section p {
 .contact-line-icon {
   min-width: 32px;
   margin-right: 18px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
   text-align: center;
   opacity: 0.6;
 }
 
 .contact-line-details {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
   text-align: left;
 }
@@ -332,23 +167,13 @@ section p {
 
 @media (max-width: 764px) {
   .footer-company {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
 .footer-dev {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   min-height: 50px;
   padding: 20px 60px 30px;
@@ -358,15 +183,8 @@ section p {
 }
 
 .credits {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   opacity: 0.75;
   text-align: center;

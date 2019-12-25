@@ -1,0 +1,36 @@
+.grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    flex-basis: 100%;
+
+    &--destinations {
+      height: 350px;
+      padding: 20px;
+      background-clip: content-box;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--medium-at-medium {
+      @mixin atMedium {
+        flex-basis: 50%;
+      }
+    }
+
+    &--small-at-large {
+      @mixin atLarge {
+        flex-basis: 30%;
+      }
+    }
+
+    &--large-at-large {
+      @mixin atLarge {
+        flex-basis: 70%;
+      }
+    }
+  }
+}
