@@ -9,16 +9,10 @@
 @import "modules/_grid";
 @import "modules/_feature";
 @import "modules/_testimonial";
+@import "modules/_separator";
+@import "modules/_subscription-form";
 @import "modules/_social-icons";
 @import "modules/_contact-page";
-
-hr {
-  width: 250px;
-  height: 3px;
-  background-color: #3f51b5;
-  border: 0;
-  margin-bottom: 50px;
-}
 
 .fadein {
   opacity: 0;
@@ -34,30 +28,6 @@ hr {
   opacity: 0;
   margin-right: -100px;
   max-width: 100%;
-}
-
-/* Contact section */
-.contact form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 60%;
-}
-
-.contact form input {
-  padding: 15px;
-  margin-right: 30px;
-  font-size: 1.125rem;
-  color: #555;
-  flex: 1;
-}
-
-@media (max-width: 1040px) {
-  .contact form input {
-    flex-basis: 100%;
-    margin: 0 0 20px 0;
-  }
 }
 
 /* Footer */
