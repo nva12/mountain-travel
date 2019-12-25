@@ -1,35 +1,10 @@
 @import "normalize.css";
+@import "base/_variables";
+@import "base/_global";
+@import "base/_mixins";
+@import "modules/_site-header";
+@import "modules/_hero";
 @import "modules/_contact";
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
-/* General styles */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  font: normal 16px sans-serif;
-  color: #555;
-  scroll-behavior: smooth;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  opacity: 0.75;
-  color: #fff;
-}
-
-a:hover {
-  opacity: 1;
-}
 
 a.btn {
   border-radius: 8px;
@@ -48,6 +23,18 @@ a.btn:hover {
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
+}
+
+.hero a.btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 20px 46px;
+}
+
+@media screen and (max-width: 800px) {
+  .hero a.btn {
+    padding: 15px 40px;
+  }
 }
 
 section {
@@ -126,144 +113,8 @@ section p {
 }
 
 /* Header */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 35px 100px 0;
-  -webkit-animation: 1s fadein 0.5s forwards;
-  animation: 1s fadein 0.5s forwards;
-  opacity: 0;
-  color: #fff;
-}
-
-@-webkit-keyframes fadein {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  100% {
-    opacity: 1;
-  }
-}
-
-header h2 {
-  font-family: "Quicksand", sans-serif;
-}
-
-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: -15px;
-}
-
-header nav li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-@media screen and (max-width: 800px) {
-  header {
-    padding: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  header h2 {
-    margin-bottom: 15px;
-  }
-  header nav {
-    margin-right: 0;
-  }
-}
 
 /* Hero section */
-.hero {
-  position: relative;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  color: #fff;
-}
-
-.hero .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  z-index: -1;
-  background-color: #80a3db;
-}
-
-.hero h1 {
-  font: bold 60px "Open Sans", sans-serif;
-  margin-bottom: 15px;
-  text-shadow: #3f51b5 1px 1px 2px;
-}
-
-.hero h3 {
-  font: normald 28px "Open Sans", sans-serif;
-  margin-bottom: 40px;
-  text-shadow: #3f51b5 1px 1px 1px;
-}
-
-.hero a.btn {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 20px 46px;
-}
-
-.hero-content-area {
-  opacity: 0;
-  margin-top: 100px;
-  -webkit-animation: 1s slidefade 0.5s forwards;
-  animation: 1s slidefade 0.5s forwards;
-}
-
-@-webkit-keyframes slidefade {
-  100% {
-    opacity: 1;
-    margin: 0;
-  }
-}
-
-@keyframes slidefade {
-  100% {
-    opacity: 1;
-    margin: 0;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .hero h3 {
-    font-size: 1.5rem;
-  }
-  .hero a.btn {
-    padding: 15px 40px;
-  }
-}
 
 /* Destinations section */
 .destinations .grid li {

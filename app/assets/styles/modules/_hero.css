@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+  }
+
+  &__content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slideFadeHero 0.5s forwards;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: #3f51b5 1px 1px 2px;
+
+    @mixin atMedium {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-shadow: #3f51b5 1px 1px 1px;
+
+    @mixin atMedium {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@keyframes slideFadeHero {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
+}
