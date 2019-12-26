@@ -1,0 +1,20 @@
+.btn {
+  padding: 18px 42px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  background-color: $mainIndigo;
+  opacity: 1;
+  transition: all 0.3s 0.05s;
+
+  &:hover {
+    background-color: $darkerIndigo;
+    transform: translateY(-2px);
+  }
+
+  &--hero {
+    display: inline-block;
+    margin-top: 40px;
+  }
+}

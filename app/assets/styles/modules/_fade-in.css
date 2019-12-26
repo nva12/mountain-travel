@@ -1,0 +1,15 @@
+.fade-in {
+  opacity: 0;
+
+  &--left {
+    opacity: 0;
+    margin-left: -100px;
+    max-width: 100%;
+  }
+
+  &--right {
+    opacity: 0;
+    margin-right: -100px;
+    max-width: 100%;
+  }
+}
