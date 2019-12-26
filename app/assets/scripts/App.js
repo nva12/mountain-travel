@@ -4,7 +4,7 @@ import $ from "jquery";
 
 $(document).ready(function() {
   $(window).scroll(function() {
-    $(".fadein").each(function(i) {
+    $(".fade-in").each(function(i) {
       var threshold_of_element =
         $(this).offset().top + 0.3 * $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -13,7 +13,7 @@ $(document).ready(function() {
         $(this).animate({ opacity: "1" }, 1500);
       }
     });
-    $(".fadeinleft").each(function(i) {
+    $(".fade-in--left").each(function(i) {
       var threshold_of_element =
         $(this).offset().top + 0.3 * $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -22,7 +22,7 @@ $(document).ready(function() {
         $(this).animate({ opacity: "1", "margin-left": "0px" }, 1500);
       }
     });
-    $(".fadeinright").each(function(i) {
+    $(".fade-in--right").each(function(i) {
       var threshold_of_element =
         $(this).offset().top + 0.3 * $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();

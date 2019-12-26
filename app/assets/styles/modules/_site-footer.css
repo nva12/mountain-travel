@@ -1,0 +1,32 @@
+.site-footer {
+  background-color: #607d8b;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+
+  &__copyright {
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  &__credits {
+    font-size: 0.8125rem;
+    line-height: 1.33;
+  }
+
+  &__links {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+
+    li {
+      @mixin atMedium {
+        display: inline-block;
+
+        &:not(:last-of-type)::after {
+          content: " |";
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}

@@ -4,4 +4,11 @@
   background-color: $mainIndigo;
   border: 0;
   margin-bottom: 50px;
+
+  &--contact-form {
+    width: 400px;
+    max-width: 80%;
+    margin: 10px auto 30px;
+    display: block;
+  }
 }
