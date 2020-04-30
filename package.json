@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/nva12/mountain-travel#readme",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lazysizes": "^5.1.2",
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
